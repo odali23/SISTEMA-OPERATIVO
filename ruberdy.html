@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Sistema Operativo: Máquina Extendida y Administrador de Recursos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --bg: #f8fafc;
+            --white: #fff;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: var(--bg);
+            color: #222;
+        }
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 2rem 1rem 1.5rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        nav {
+            margin: 1rem 0 0 0;
+        }
+        nav a {
+            color: var(--white);
+            background: var(--secondary);
+            text-decoration: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            margin: 0 0.5rem;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+        nav a:hover {
+            background: var(--primary);
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(100,116,139,0.08);
+            padding: 2rem 1.5rem;
+        }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        section h2 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .icon {
+            font-size: 1.6rem;
+            vertical-align: middle;
+        }
+        .img-rep {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-right: 0.7rem;
+        }
+        .ejemplo {
+            background: #e0e7ef;
+            border-left: 4px solid var(--primary);
+            padding: 0.7rem 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            color: #334155;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: #f1f5f9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 0.7rem 0.5rem;
+            text-align: left;
+        }
+        th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background: #e0e7ef;
+        }
+        footer {
+            text-align: center;
+            padding: 1.2rem 0 0.7rem 0;
+            color: var(--secondary);
+            font-size: 1rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 1rem 0.5rem;
+            }
+            header h1 {
+                font-size: 1.2rem;
+            }
+            section h2 {
+                font-size: 1.1rem;
+            }
+            .img-rep {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>El Sistema Operativo: Máquina Extendida y Administrador de Recursos</h1>
+        <nav>
+            <a href="ruberdy.html">RUBERDY MIRANDA FOXTER</a>
+            <a href="saimol.html">SAIMOL MENDEZ</a>
+        </nav>
+    </header>
+    <main>
+        <section id="extendida">
+            <h2>
+                <span class="icon">🖥️</span>
+                El sistema operativo como una máquina extendida
+            </h2>
+            <p>
+                El sistema operativo (SO) actúa como una capa intermedia entre el hardware y el usuario, simplificando el uso de los componentes físicos del computador. Gracias al SO, los usuarios y los programas no necesitan conocer los detalles técnicos del hardware para interactuar con él.
+            </p>
+            <div class="ejemplo">
+                <strong>Ejemplo:</strong> Cuando guardas un archivo, el SO se encarga de traducir esa acción en instrucciones específicas para el disco duro, gestionando sectores y bloques. De igual forma, al usar el teclado, el SO interpreta las señales eléctricas y las convierte en caracteres legibles.
+            </div>
+            <img class="img-rep" src="https://img.icons8.com/color/96/operating-system.png" alt="Sistema Operativo Icono" />
+        </section>
+        <section id="administrador">
+            <h2>
+                <span class="icon">⚙️</span>
+                El sistema operativo como administrador de recursos
+            </h2>
+            <p>
+                El SO gestiona y distribuye los recursos del sistema, como el tiempo del procesador, la memoria RAM, el almacenamiento y los dispositivos de entrada/salida, para que múltiples programas y usuarios puedan utilizarlos de manera eficiente y segura.
+            </p>
+            <table>
+                <tr>
+                    <th>Recurso</th>
+                    <th>Ejemplo de Gestión</th>
+                </tr>
+                <tr>
+                    <td>Procesador (CPU)</td>
+                    <td>Permite la multitarea, ejecutando varios programas a la vez mediante la asignación de tiempo de CPU a cada uno.</td>
+                </tr>
+                <tr>
+                    <td>Memoria RAM</td>
+                    <td>Asigna espacio a cada programa y evita que interfieran entre sí.</td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento</td>
+                    <td>Organiza archivos y controla el acceso a discos duros y SSD.</td>
+                </tr>
+                <tr>
+                    <td>Dispositivos</td>
+                    <td>Gestiona impresoras, teclados, ratones y otros periféricos.</td>
+                </tr>
+                <tr>
+                    <td>Usuarios</td>
+                    <td>Permite que varios usuarios tengan cuentas y permisos diferenciados.</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        © 2024 Grupo 1 | Créditos ficticios
+    </footer>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tercera Generación de los Sistemas Operativos (1965–1980)</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Tipografía moderna -->
+    <link href="https://fonts.googleapis.com/css?family=Segoe+UI:400,700|Roboto:400,700|Open+Sans:400,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #f4f7fa;
+            --color-primary: #234567;
+            --color-secondary: #3a5068;
+            --color-accent: #5c7fa3;
+            --color-text: #222;
+            --color-section-bg: #e9eef3;
+            --color-menu-bg: #1b2a3aee;
+            --color-menu-link: #fff;
+            --color-menu-link-active: #a3c0e9;
+            --border-radius: 10px;
+            --shadow: 0 2px 8px rgba(60,80,120,0.07);
+        }
+        html {
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        body {
+            margin: 0;
+            background: var(--color-bg);
+            color: var(--color-text);
+            font-family: 'Segoe UI', 'Roboto', 'Open Sans', Arial, sans-serif;
+            line-height: 1.7;
+        }
+        /* Menú de navegación */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--color-menu-bg);
+            box-shadow: var(--shadow);
+            width: 100%;
+        }
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 1.5rem;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        .nav-link {
+            color: var(--color-menu-link);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+            cursor: pointer;
+        }
+        .nav-link:hover, .nav-link.active {
+            background: var(--color-accent);
+            color: var(--color-menu-link-active);
+        }
+        .nav-link i {
+            margin-right: 0.5em;
+            font-size: 1.2em;
+        }
+        /* Título principal */
+        header {
+            max-width: 900px;
+            margin: 2.5rem auto 1.5rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            color: var(--color-primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.01em;
+        }
+        /* Secciones */
+        main {
+            max-width: 900px;
+            margin: 0 auto 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+        section {
+            background: var(--color-section-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            padding: 2rem 1.5rem;
+            transition: box-shadow 0.2s;
+        }
+        section:hover {
+            box-shadow: 0 4px 16px rgba(60,80,120,0.13);
+        }
+        section h2 {
+            color: var(--color-secondary);
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+        section ul {
+            margin: 0.5rem 0 0 1.2rem;
+            padding: 0;
+        }
+        /* Responsive */
+        @media (max-width: 600px) {
+            .nav-container, header, main {
+                padding-left: 0.7rem;
+                padding-right: 0.7rem;
+            }
+            section {
+                padding: 1.2rem 0.7rem;
+            }
+            header h1 {
+                font-size: 1.3rem;
+            }
+            section h2 {
+                font-size: 1.1rem;
+            }
+            .nav-links {
+                gap: 0.7rem;
+            }
+            .nav-link {
+                font-size: 1rem;
+                padding: 0.3rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a class="nav-link" href="index.html"><i class="fa-solid fa-brain"></i>INICIO</a>
+                <a class="nav-link active" href="felix.html"><i class="fa-solid fa-user-astronaut"></i>FELIX SALOMON</a>
+                <a class="nav-link" href="#"><i class="fa-solid fa-user-astronaut"></i>ODALI REYES DE LEON</a>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1>Tercera Generación de los Sistemas Operativos (1965–1980)</h1>
+    </header>
+    <main>
+        <section>
+            <h2>1. Sistemas Operativos Independientes</h2>
+            <p>
+            Durante la tercera generación, los sistemas operativos comenzaron a desarrollarse de manera independiente del hardware específico. Esto permitió una mayor portabilidad y compatibilidad entre diferentes equipos, facilitando la migración de aplicaciones y el desarrollo de software más universal.
+            </p>
+        </section>
+        <section>
+            <h2>2. Lenguajes de Alto Nivel</h2>
+            <p>
+            En esta época se popularizó el uso de lenguajes de alto nivel, lo que simplificó el desarrollo de software y mejoró la productividad de los programadores. Entre los lenguajes más destacados se encuentran:
+            </p>
+            <ul>
+            <li>
+                <strong>COBOL</strong>: Diseñado para aplicaciones de gestión empresarial, COBOL (Common Business-Oriented Language) es conocido por su facilidad para procesar grandes volúmenes de datos y su sintaxis cercana al lenguaje natural.<br>
+                <img src="presentacion web/images.jpeg" alt="Ejemplo de código COBOL" style="max-width:300px;display:block;margin:10px 0;">
+                <small>Ejemplo de código COBOL (Fuente: Wikimedia Commons)</small>
+                <ul>
+                <li>COBOL fue ampliamente adoptado por bancos, gobiernos y grandes empresas para sistemas de nómina, contabilidad y gestión.</li>
+                <li>Su longevidad es notable: muchos sistemas críticos aún usan COBOL hoy en día.</li>
+                <li>COBOL fue uno de los primeros lenguajes en enfocarse en la legibilidad y la facilidad de mantenimiento.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Fortran</strong>: FORTRAN (Formula Translation) fue creado para cálculos científicos y matemáticos. Es reconocido por su eficiencia en el procesamiento numérico y su uso en aplicaciones de ingeniería y ciencia.<br>
+                <img src="presentacion web/foltran.jpeg" alt="Tarjeta perforada con código Fortran" style="max-width:300px;display:block;margin:10px 0;">
+                <small>Tarjeta perforada con código Fortran (Fuente: Wikimedia Commons)</small>
+                <ul>
+                <li>Fortran permitió a científicos e ingenieros escribir programas complejos para simulaciones, análisis de datos y cálculos matemáticos.</li>
+                <li>Fue el primer lenguaje de alto nivel ampliamente adoptado en la computación científica.</li>
+                <li>Fortran sigue siendo utilizado en supercomputadoras y aplicaciones de alto rendimiento.</li>
+                </ul>
+            </li>
+            </ul>
+        </section>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

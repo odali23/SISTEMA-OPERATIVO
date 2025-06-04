@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Cuarta Generación de Sistemas Operativos</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e293b;
+            --secondary: #0ea5e9;
+            --accent: #38bdf8;
+            --bg: #f1f5f9;
+            --card-bg: #fff;
+            --text: #1e293b;
+            --shadow: 0 4px 24px 0 rgba(30,41,59,0.08);
+            --radius: 18px;
+            --transition: 0.2s;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f1f5f9 100%);
+            color: var(--text);
+        }
+        nav {
+            background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 100%);
+            box-shadow: var(--shadow);
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            padding: 0.5em 1em;
+            border-radius: var(--radius);
+            transition: background var(--transition), color var(--transition);
+        }
+        nav a:hover, nav a:focus {
+            background: var(--accent);
+            color: var(--primary);
+        }
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+        section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: box-shadow var(--transition);
+        }
+        section:hover {
+            box-shadow: 0 8px 32px 0 rgba(14,165,233,0.12);
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.7em;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .hero-icon {
+            font-size: 3.5rem;
+            color: var(--secondary);
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            border-radius: 50%;
+            padding: 0.7em;
+            box-shadow: var(--shadow);
+        }
+        .hero-content {
+            flex: 1;
+            min-width: 220px;
+        }
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 0 0 0.5em 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+        .hero-desc {
+            font-size: 1.2rem;
+            color: #334155;
+            margin-bottom: 0;
+        }
+        /* Características */
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0 0 0;
+            padding: 0;
+            list-style: none;
+        }
+        .feature-card {
+            background: linear-gradient(120deg, #e0f2fe 60%, #f1f5f9 100%);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1.2rem 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1em;
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+        .feature-card:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 8px 32px 0 rgba(14,165,233,0.13);
+        }
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+        /* Ejemplos */
+        .os-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0 0 0;
+            padding: 0;
+            list-style: none;
+        }
+        .os-card {
+            background: linear-gradient(120deg, #f1f5f9 60%, #e0f2fe 100%);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1.2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.7em;
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+        .os-card:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 8px 32px 0 rgba(14,165,233,0.13);
+        }
+        .os-img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 2px 8px 0 rgba(30,41,59,0.07);
+            margin-bottom: 0.3em;
+        }
+        .os-name {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        /* Impacto */
+        .impact-list {
+            margin: 1.2rem 0 0 0;
+            padding-left: 1.2em;
+            color: #334155;
+            font-size: 1.07rem;
+        }
+        /* Responsive */
+        @media (max-width: 700px) {
+            main { padding: 0 0.3rem; }
+            .hero { flex-direction: column; gap: 1.2rem; }
+            section { padding: 1.2rem 0.7rem; }
+            .section-title { font-size: 1.2rem; }
+            .hero-title { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#inicio"><i class="fa-solid fa-house"></i>Inicio</a></li>
+            <li><a href="#contexto"><i class="fa-solid fa-clock-rotate-left"></i>Contexto</a></li>
+            <li><a href="#caracteristicas"><i class="fa-solid fa-list-check"></i>Características</a></li>
+            <li><a href="#ejemplos"><i class="fa-solid fa-desktop"></i>Ejemplos</a></li>
+            <li><a href="#impacto"><i class="fa-solid fa-bolt"></i>Impacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- INICIO -->
+        <section id="inicio">
+            <div class="hero">
+                <div class="hero-icon">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <i class="fa-solid fa-microchip"></i>
+                        Cuarta Generación de Sistemas Operativos
+                    </h1>
+                    <p class="hero-desc">
+                        Descubre cómo los sistemas operativos modernos han revolucionado la tecnología, conectando dispositivos, personas y servicios en todo el mundo.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- CONTEXTO -->
+        <section id="contexto">
+            <div class="section-title">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Contexto Histórico
+            </div>
+            <p>
+                La cuarta generación de los sistemas operativos surge a partir de la década de 1980-1990 y se extiende hasta la actualidad. Esta etapa se caracteriza por la integración de tecnologías de red, la aparición de sistemas distribuidos, la virtualización y la expansión de la computación en la nube y los dispositivos móviles. Los sistemas operativos evolucionan para gestionar recursos en entornos complejos, conectados y altamente interactivos.
+            </p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Sistemas distribuidos modernos" style="width:100%;max-width:500px;display:block;margin:1.5em auto 0 auto;border-radius:14px;box-shadow:0 2px 16px 0 rgba(14,165,233,0.10);">
+        </section>
+        <!-- CARACTERÍSTICAS -->
+        <section id="caracteristicas">
+            <div class="section-title">
+                <i class="fa-solid fa-list-check"></i>
+                Características Principales
+            </div>
+            <ul class="features-list">
+                <li class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-diagram-project"></i></span>
+                    <div>
+                        <strong>Sistemas operativos distribuidos</strong><br>
+                        Permiten la gestión de recursos y tareas en múltiples computadoras conectadas en red.
+                    </div>
+                </li>
+                <li class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-layer-group"></i></span>
+                    <div>
+                        <strong>Virtualización</strong><br>
+                        Facilitan la ejecución de varios sistemas operativos o entornos virtuales en un solo hardware físico.
+                    </div>
+                </li>
+                <li class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-display"></i></span>
+                    <div>
+                        <strong>Interfaces gráficas avanzadas</strong><br>
+                        Ofrecen entornos visuales intuitivos y atractivos para el usuario.
+                    </div>
+                </li>
+                <li class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-microchip"></i></span>
+                    <div>
+                        <strong>Multiprocesamiento</strong><br>
+                        Soportan la ejecución simultánea de múltiples procesos en varios núcleos o procesadores.
+                    </div>
+                </li>
+                <li class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-globe"></i></span>
+                    <div>
+                        <strong>Sistemas en red e Internet</strong><br>
+                        Integran capacidades de comunicación y acceso a servicios globales a través de Internet.
+                    </div>
+                </li>
+                <li class="feature-card">
+                    <span class="feature-icon"><i class="fa-solid fa-cloud"></i></span>
+                    <div>
+                        <strong>Computación en la nube</strong><br>
+                        Permiten el acceso remoto a recursos, almacenamiento y aplicaciones desde cualquier lugar.
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- EJEMPLOS -->
+        <section id="ejemplos">
+            <div class="section-title">
+                <i class="fa-solid fa-desktop"></i>
+                Ejemplos de Sistemas Operativos Modernos
+            </div>
+            <ul class="os-list">
+                <li class="os-card">
+                    <img class="os-img" src="https://upload.wikimedia.org/wikipedia/commons/4/48/Windows_logo_-_2021.svg" alt="Windows">
+                    <span class="os-name">Windows</span>
+                </li>
+                <li class="os-card">
+                    <img class="os-img" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux">
+                    <span class="os-name">Linux</span>
+                </li>
+                <li class="os-card">
+                    <img class="os-img" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png" alt="macOS">
+                    <span class="os-name">macOS</span>
+                </li>
+                <li class="os-card">
+                    <img class="os-img" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android">
+                    <span class="os-name">Android</span>
+                </li>
+                <li class="os-card">
+                    <img class="os-img" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/IOS_logo.svg" alt="iOS">
+                    <span class="os-name">iOS</span>
+                </li>
+                <li class="os-card">
+                    <img class="os-img" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png" alt="ChromeOS">
+                    <span class="os-name">ChromeOS</span>
+                </li>
+            </ul>
+        </section>
+        <!-- IMPACTO -->
+        <section id="impacto">
+            <div class="section-title">
+                <i class="fa-solid fa-bolt"></i>
+                Impacto en la Sociedad
+            </div>
+            <p>
+                Los sistemas operativos de cuarta generación han transformado radicalmente la vida cotidiana, la educación, los negocios y la movilidad:
+            </p>
+            <ul class="impact-list">
+                <li><strong>Vida cotidiana:</strong> Facilitan la comunicación, el entretenimiento y el acceso a información desde cualquier dispositivo.</li>
+                <li><strong>Educación:</strong> Permiten el aprendizaje en línea, la colaboración remota y el acceso a recursos educativos globales.</li>
+                <li><strong>Negocios:</strong> Impulsan la productividad, la gestión eficiente de recursos y la globalización de los servicios.</li>
+                <li><strong>Movilidad:</strong> Hacen posible el trabajo y la conectividad desde cualquier lugar, gracias a dispositivos móviles y la nube.</li>
+            </ul>
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="Impacto de los sistemas operativos modernos" style="width:100%;max-width:500px;display:block;margin:1.5em auto 0 auto;border-radius:14px;box-shadow:0 2px 16px 0 rgba(14,165,233,0.10);">
+        </section>
+    </main>
+</body>
+</html>

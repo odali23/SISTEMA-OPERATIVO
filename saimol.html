@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera Generación de Computadoras (1950–1959)</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background: #f7f9fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(60, 72, 88, 0.07);
+            border-radius: 0 0 12px 12px;
+            margin-bottom: 28px;
+            padding: 0 24px;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            max-width: 950px;
+            margin: 0 auto;
+            height: 56px;
+        }
+        .nav-menu a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background 0.15s;
+        }
+        .nav-menu a.active,
+        .nav-menu a:hover {
+            background: #e9eefb;
+        }
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(60, 72, 88, 0.12);
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+        .image-col {
+            flex: 1 1 320px;
+            min-width: 260px;
+            background: #e9eef3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+        }
+        .image-col img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(60, 72, 88, 0.10);
+        }
+        .content-col {
+            flex: 2 1 400px;
+            min-width: 260px;
+            padding: 40px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 2.1rem;
+            margin-bottom: 28px;
+            color: #22314a;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px 0;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            font-size: 1.08rem;
+            margin-bottom: 18px;
+            color: #34495e;
+        }
+        li i {
+            color: #3b82f6;
+            margin-right: 14px;
+            font-size: 1.2em;
+            min-width: 22px;
+            text-align: center;
+        }
+        .ejemplos {
+            margin-top: 18px;
+            font-size: 1.05rem;
+            color: #2d3a4d;
+        }
+        .ejemplos strong {
+            color: #3b82f6;
+        }
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+            .image-col, .content-col {
+                padding: 24px;
+            }
+            h1 {
+                font-size: 1.4rem;
+            }
+            .nav-menu {
+                height: auto;
+                flex-direction: column;
+                gap: 8px;
+                padding: 10px 0;
+            }
+        }
+        @media (max-width: 500px) {
+            .container {
+                margin: 10px;
+            }
+            .image-col, .content-col {
+                padding: 14px;
+            }
+            nav {
+                padding: 0 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-menu">
+            <a href="saimol.html" class="active"><i class="fas fa-laptop"></i> SAIMOL MENDEZ</a>
+            <a href="luis.html"><i class="fas fa-user"></i> LUIS EDUARDO  AGRAMONTW</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="image-col">
+            <img src="presentacion web/ecniac.jpeg" alt="Computadora ENIAC">
+        </div>
+        <div class="content-col">
+            <h1>Primera Generación de Computadoras (1950–1959)</h1>
+            <ul>
+            <li><i class="fas fa-bolt"></i>Funcionaban con tubos al vacío.</li>
+            <li><i class="fas fa-expand-arrows-alt"></i>Ocupaban mucho espacio y generaban calor.</li>
+            <li><i class="fas fa-punch-card"></i>Usaban tarjetas perforadas para entrada y salida de datos.</li>
+            <li><i class="fas fa-code"></i>Programadas en lenguaje máquina y ensamblador.</li>
+            <li><i class="fas fa-hand-paper"></i>No tenían sistema operativo, se operaban manualmente.</li>
+            <li><i class="fas fa-memory"></i>Memoria principal basada en tambores magnéticos.</li>
+            <li><i class="fas fa-tachometer-alt"></i>Velocidad de procesamiento muy baja comparada con generaciones posteriores.</li>
+            <li><i class="fas fa-tools"></i>Mantenimiento frecuente debido a fallas de los tubos al vacío.</li>
+            </ul>
+            <div class="ejemplos">
+            <strong>Ejemplos:</strong> ENIAC, UNIVAC I, IBM 701, EDVAC, IBM 650.
+            </div>
+            <div style="margin-top:24px; display:flex; gap:18px; flex-wrap:wrap;">
+            <img src="presentacion web/SAIMOL.1.png" alt="IBM 701" style="max-width:160px; border-radius:8px; box-shadow:0 2px 8px rgba(60,72,88,0.10);">
+            <img src="presentacion web/univac.jpeg" alt="UNIVAC I" style="max-width:160px; border-radius:8px; box-shadow:0 2px 8px rgba(60,72,88,0.10);">
+            <img src="presentacion web/download.jpeg" alt="IBM 650" style="max-width:160px; border-radius:8px; box-shadow:0 2px 8px rgba(60,72,88,0.10);">
+            </div>
+            <div style="margin-top:18px; color:#34495e; font-size:1.01rem;">
+            <strong>Dato curioso:</strong> La ENIAC pesaba más de 27 toneladas y consumía tanta electricidad que podía apagar las luces de una ciudad pequeña.
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Polyfill para el ícono de tarjeta perforada si Font Awesome no lo tiene -->
+    <script>
+        // Si Font Awesome no tiene fa-punch-card, reemplazar por fa-database
+        document.querySelectorAll('i.fa-punch-card').forEach(function(icon){
+            icon.classList.remove('fa-punch-card');
+            icon.classList.add('fa-database');
+        });
+    </script>
+</body>
+</html>

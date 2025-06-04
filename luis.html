@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Segunda Generación de Computadoras (1955-1965)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: #f4f6fa;
+            color: #222;
+        }
+        header {
+            background: #2d3e50;
+            color: #fff;
+            padding: 1.5rem 0 1rem 0;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        nav {
+            background: #1a2533;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0.7rem 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        nav a:hover, nav a:focus {
+            background: #3e5673;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h2 {
+            color: #2d3e50;
+            border-bottom: 2px solid #e0e6ed;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+        .img-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        .img-container img {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 1rem;
+            }
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+        /* Navegación por anclas: resalta la sección activa */
+        :target {
+            animation: highlight 1s;
+        }
+        @keyframes highlight {
+            from { background: #e3f2fd; }
+            to { background: transparent; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Segunda Generación de Computadoras (1955-1965)</h1>
+    </header>
+    <nav>
+        <a href="luis.html">LUIS EDUARDO AGRAMONTE</a>
+        <a href="felix.html">FELIX SALOMON</a>
+    </nav>
+    <main>
+        <section id="luis">
+            <h2>Luis: Introducción de los Transistores</h2>
+            <p>
+                Durante la segunda generación de computadoras, que abarca de 1955 a 1965, se produjo un cambio revolucionario: la sustitución de las válvulas de vacío por transistores. Los transistores, inventados en 1947 pero adoptados masivamente en los años 50, permitieron construir computadoras mucho más pequeñas, rápidas, eficientes y confiables.
+            </p>
+            <p>
+                Gracias a los transistores, las computadoras dejaron de ser enormes y frágiles, y su consumo energético disminuyó notablemente. Esta innovación sentó las bases para el desarrollo de los circuitos integrados, que aparecerían en la siguiente generación y permitirían una miniaturización aún mayor de los componentes electrónicos.
+            </p>
+            <div class="img-container">
+                <img src="presentacion web/luis.jpg" alt="Transistor de la segunda generación">
+                <div style="font-size:0.95em; color:#555; margin-top:0.5em;">Transistor típico de la época</div>
+            </div>
+        </section>
+        <section id="felix">
+            <h2>Luis: Procesamiento por Lotes</h2>
+            <p>
+                En la segunda generación surgieron los sistemas de procesamiento por lotes (<em>batch processing</em>). Este método consistía en agrupar varios trabajos o tareas en un lote, que luego se procesaba de manera secuencial sin intervención humana entre cada tarea.
+            </p>
+            <p>
+                El procesamiento por lotes mejoró significativamente la eficiencia de las computadoras, ya que permitía aprovechar mejor el tiempo de la máquina y reducir los periodos de inactividad. Los usuarios entregaban sus trabajos (por ejemplo, tarjetas perforadas) y recibían los resultados después de que el lote completo había sido procesado.
+            </p>
+            <div class="img-container">
+                <img src="presentacion web/luis2.jpg" alt="Computadora de segunda generación IBM 1401">
+                <div style="font-size:0.95em; color:#555; margin-top:0.5em;">Computadora IBM 1401, representativa de la segunda generación</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
